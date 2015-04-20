@@ -1,0 +1,10 @@
+{
+  "name": "resize-sensor",
+  "version": "0.0.2",
+  "main": "ResizeSensor.min.js",
+  "description": "Element Sensor is a purely event based element size changing detector, which means intermitten checking free.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/normanzb/resize-sensor"
+  }
+}
