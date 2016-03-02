@@ -182,4 +182,4 @@ define(function() {
     };
 
     return ResizeSensor;
-})();
+});

@@ -14,7 +14,7 @@
   }
 }(this, function () {
 
-define('ResizeSensor', [], function () {
+var ResizeSensor = function () {
     'use strict';
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (fn) {
         return window.setTimeout(fn, 20);
@@ -127,8 +127,7 @@ define('ResizeSensor', [], function () {
     var ResizeSensor = function (element, callback) {
         var me = this;
         var elementType = Object.prototype.toString.call(element);
-        var isCollectionTyped = me._isCollectionTyped = '[object Array]' === elementType || '[object NodeList]' === elementType || '[object HTMLCollection]' === elementType || 'undefined' !== typeof jQuery && element instanceof window.jQuery || 'undefined' !== typeof Elements && element instanceof window.Elements    //mootools
-;
+        var isCollectionTyped = me._isCollectionTyped = '[object Array]' === elementType || '[object NodeList]' === elementType || '[object HTMLCollection]' === elementType || 'undefined' !== typeof jQuery && element instanceof window.jQuery || 'undefined' !== typeof Elements && element instanceof window.Elements;
         me._element = element;
         if (isCollectionTyped) {
             var i = 0, j = element.length;
@@ -160,7 +159,7 @@ define('ResizeSensor', [], function () {
         }
     };
     return ResizeSensor;
-})();
+}();
 
 return ResizeSensor;
 
